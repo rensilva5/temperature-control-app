@@ -1,3 +1,7 @@
+html {
+  background: lightblue;
+}
+
 body {
   font-family: sans-serif;
   text-align: center;
@@ -10,10 +14,10 @@ body {
 }
 
 .app-container {
-  height: 400px;
-  width: 300px;
+  height: 480px;
+  width: 350px;
   background: #2b5870;
-  border-radius: 20px;
+  border-radius: 20%;
   box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -35,7 +39,7 @@ body {
   align-items: center;
   font-size: 48px;
   border: 3px #ffffff solid;
-  transition: background 0.5s;
+  transition: background 0.4s;
 }
 
 button {
@@ -68,9 +72,9 @@ button:focus {
 }
 
 .cold {
-  background: #035aa6;
+  background: #5A94D2;
 }
 
 .hot {
-  background: #ff5200;
+  background: #FFC300;
 }

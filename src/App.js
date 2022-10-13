@@ -2,35 +2,35 @@ import React from "react";
 import { useState } from "react";
 
 const App = ( ) => {
-  const [temperatureValue, setTemperatureValue] = useState(10)
+  const [temperature, setTemperature] = useState(10)
   const [temperatureColor, setTemperatureColor] = useState('cold')
 
   const increaseTemperature = () => {
-    const newTemperature = temperatureValue + 1
-    if (temperatureValue === 100)
-    return
+    const newTemperature = temperature + 1
+    if (temperature === 40) return
 
     if (newTemperature >= 15) {
       setTemperatureColor('hot')
     }
-    setTemperatureValue(newTemperature)
+    setTemperature(newTemperature)
   }
   
   const decreaseTemperature = () => {
-    const newTemperature = temperatureValue - 1
-    if (temperatureValue === 0)
+    const newTemperature = temperature - 1
+    if (temperature === 0)
     return
 
     if (newTemperature < 15) {
       setTemperatureColor('cold')
     }
-    setTemperatureValue(newTemperature)
+    setTemperature(newTemperature)
   }
 
   return (
     <div className="app-container">
+      {/* <h1>TCA</h1> */}
       <div className="temperature-display-container">
-        <div className={`temperature-display ${temperatureColor}`}>{temperatureValue}°C</div>
+        <div className={`temperature-display ${temperatureColor}`}>{temperature}°C</div>
       </div>
       <div className="button-container">
         <button onClick={ ()=>  increaseTemperature() }>+</button>
